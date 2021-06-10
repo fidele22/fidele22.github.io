@@ -1,6 +1,6 @@
 body{
     margin:0;
-    background-color: lightslategrey;
+    background-color: rgb(142, 165, 177);
 }
 nav{
     background-color: #55b38e;
@@ -27,8 +27,9 @@ li:hover{
     float: right ;
 }
 div.wrap{
-    background: url('../img/images\ \(1\).jpg') repeat;
-    min-height: 100vh;
+    background: url('../img/butare.jpg') repeat;
+    min-height: 200vh;
+  text-decoration:none;
 }
 
 a{
@@ -36,26 +37,26 @@ a{
     color:#fff;
 }
 
-.about_wrap{
+.course_wrap{
     background-color:lightslategrey;
     min-height: 100vh;
     margin-top: -16px;
 }
 
-.about_box{
+.course_box{
     background-color:#eee;
     min-height: 80vh;
     margin: 90px;
     border-radius: 20px;
 }
 
-.contact_box{
+.tutoriol_box{
     display: flex;
     align-items: center;
     background-color:#eee;
     min-height: 80vh;
 }
-div.contact_box div{
+div.tutorial_box div{
     border: 1px solid lightblue;
     margin-left: 20px;
     padding: 20px;
