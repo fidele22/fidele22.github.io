@@ -29,7 +29,10 @@ li:hover{
 div.wrap{
     background: url('../img/butare.jpg') repeat;
     min-height: 200vh;
-  text-decoration:none;
+  text-decoration:text;
+text{
+      list-style-position: center;
+  }: 1px;
 }
 
 a{
