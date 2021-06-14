@@ -16,6 +16,7 @@ ul{
 li{
     float: left;
     margin-left: 5em;
+      margin-right: 58px;
 }
 
 li:hover{
