@@ -1,17 +1,4 @@
-/*// Function to write text before game starts
-let i = 0;
-let txt = 'Rock, Paper, Scissors?';
-let speed = 50;
 
-function typeWriter() {
-    if (i < txt.length) {
-        document.getElementById("gameh1").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
-}
-
-*/
 // Function to play main button audio on click
 function playSound() {
     const buttonPress = document.querySelector("#startbuttonsound");
@@ -154,14 +141,14 @@ function playRound(playerSelection) {
     // Loop through computer options
     if (computerSelection == "rock") {
         // Change the background color of the rock div
-        computerRockSelected.style.backgroundColor = "#7987e9";
+        computerRockSelected.style.backgroundColor = "#7987e7";
         // Change the background color of the other divs
         computerPaperSelected.style.backgroundColor = "white";
         computerScissorsSelected.style.backgroundColor = "white";
     }
     else if (computerSelection == "paper") {
         // Change the background color of the paper div
-        computerPaperSelected.style.backgroundColor = "#7987e9";
+        computerPaperSelected.style.backgroundColor = "#7987e7";
         // Change the background color of the other divs
         computerRockSelected.style.backgroundColor = "white";
         computerScissorsSelected.style.backgroundColor = "white";
@@ -169,7 +156,7 @@ function playRound(playerSelection) {
 
     else if (computerSelection == "scissors") {
         // Change the background color of the rock div
-        computerScissorsSelected.style.backgroundColor = "#7987e9";
+        computerScissorsSelected.style.backgroundColor = "#7987e7";
         // Change the background color of the other divs
         computerRockSelected.style.backgroundColor = "white";
         computerPaperSelected.style.backgroundColor = "white";
@@ -305,8 +292,6 @@ function game(playerScore, computerScore) {
     // Set variable for the game update paragraph tag
     const gameUpdates = document.querySelector(".gameupdates");
     // Set variables for the user and robot win logos
-    let userWinLogo = document.getElementById('userwinslogo');
-    let robotWinLogo = document.getElementById('robotwinslogo');
     if (playerScore == 5 || computerScore == 5) {
         if (playerScore > computerScore) {
             let text = document.createTextNode(`YOU WIN ${playerScore}:${computerScore}!`);
