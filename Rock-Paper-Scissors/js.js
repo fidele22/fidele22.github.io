@@ -1,11 +1,4 @@
 
-// Function to play main button audio on click
-function playSound() {
-    const buttonPress = document.querySelector("#startbuttonsound");
-    buttonPress.play();
-}
-mainButton = document.querySelector("#startbutton").addEventListener("click", playSound);
-
  //Function to hide start div and show end div
 let startContainer = document.getElementById('startcontainer');
 let btn = document.querySelector("#startbutton");
@@ -18,12 +11,8 @@ btn.addEventListener('click', function(){
         startContainer.style.display = 'none';
     },700); 
     setTimeout(() => {  typeWriter(); }, 1000);
-    // Add event listener to all of the game buttons
-    gameButtons = document.querySelectorAll(".gameselection").forEach(item => {
-        item.addEventListener("click", playSound);
-    })
+   
 });
-
 
 // Function to hide end div and show winner div & logos
 function hideEndContainerShowWinner() {
@@ -44,10 +33,6 @@ btn.addEventListener('click', function(){
         startContainer.style.display = 'none';
     },700); 
     setTimeout(() => {  typeWriter(); }, 1000);
-    // Add event listener to all of the game buttons
-    gameButtons = document.querySelectorAll(".gameselection").forEach(item => {
-        item.addEventListener("click", playSound);
-    })
 });
 
 
@@ -64,45 +49,35 @@ document.addEventListener("click", gameSelectionListener);
 // See if the click was on a game selection button (can't apply directly on button as div initially hidden)
 function gameSelectionListener(event) {
     let element = event.target;
-    console.log(event.target);
     let rock = "rock";
     let paper = "paper";
     let scissors = "scissors";
     if (element.classList.contains("gameselection") && element.id === ("rockdiv")) {
-        playRound(rock);
-        console.log("submitted rock")
+        playRound(rock);    
     }
     else if (element.classList.contains("selection") && element.id === ("rockimg")) {
         playRound(rock);
-        console.log("submitted rock")
     }
     else if (element.classList.contains("gameselectiontext") && element.id === ("rockselection")) {
         playRound(rock);
-        console.log("submitted rock")
     }
     else if (element.classList.contains("gameselection") && element.id === ("paperdiv")) {
         playRound(paper);
-        console.log("submitted paper")
     }
     else if (element.classList.contains("selection") && element.id === ("paperimg")) {
         playRound(paper);
-        console.log("submitted paper")
     }
     else if (element.classList.contains("gameselectiontext") && element.id === ("paperselection")) {
         playRound(paper);
-        console.log("submitted paper")
     }
     else if (element.classList.contains("gameselection") && element.id === ("scissorsdiv")) {
         playRound(scissors);
-        console.log("submitted scissors")
     }
     else if (element.classList.contains("selection") && element.id === ("scissorsimg")) {
         playRound(scissors);
-        console.log("submitted scissors")
     }
     else if (element.classList.contains("gameselectiontext") && element.id === ("scissorsselection")) {
         playRound(scissors);
-        console.log("submitted scissors")
     }
 }
 
@@ -141,14 +116,14 @@ function playRound(playerSelection) {
     // Loop through computer options
     if (computerSelection == "rock") {
         // Change the background color of the rock div
-        computerRockSelected.style.backgroundColor = "#7987e7";
+        computerRockSelected.style.backgroundColor = "green";
         // Change the background color of the other divs
         computerPaperSelected.style.backgroundColor = "white";
         computerScissorsSelected.style.backgroundColor = "white";
     }
     else if (computerSelection == "paper") {
         // Change the background color of the paper div
-        computerPaperSelected.style.backgroundColor = "#7987e7";
+        computerPaperSelected.style.backgroundColor = "green";
         // Change the background color of the other divs
         computerRockSelected.style.backgroundColor = "white";
         computerScissorsSelected.style.backgroundColor = "white";
@@ -156,7 +131,7 @@ function playRound(playerSelection) {
 
     else if (computerSelection == "scissors") {
         // Change the background color of the rock div
-        computerScissorsSelected.style.backgroundColor = "#7987e7";
+        computerScissorsSelected.style.backgroundColor = "green";
         // Change the background color of the other divs
         computerRockSelected.style.backgroundColor = "white";
         computerPaperSelected.style.backgroundColor = "white";
